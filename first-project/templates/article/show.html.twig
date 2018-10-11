@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Read {{ title }}{% endblock %}
+
+{% block body %}
+<h1>{{ title }}</h1>
+
+Bacon ipsum dolor amet pork loin buffalo hamburger pig. Rump sausage picanha, buffalo tenderloin chicken kielbasa cow. Ham hock strip steak flank sirloin sausage doner. Salami ground round bresaola beef ribs, short loin pork loin prosciutto spare ribs andouille jerky burgdoggen ham hock. Kielbasa landjaeger tongue short ribs. Picanha jerky short loin pork corned beef drumstick tenderloin turducken salami sirloin ham hock bresaola.
+<br /><br />
+
+Chuck kevin biltong meatloaf shoulder. Porchetta hamburger t-bone sirloin turkey beef. Sausage biltong porchetta, beef ribs beef picanha pork chop meatloaf kevin bacon turducken pork hamburger andouille pork belly. Ribeye doner landjaeger beef ribs. Pastrami rump shank flank. Chicken shank biltong pancetta. Rump turkey pancetta doner meatloaf, spare ribs meatball.
+<br /><br />
+
+Tongue ground round ham buffalo pork chop frankfurter kielbasa short loin rump ball tip boudin alcatra tri-tip short ribs pig. Chicken biltong buffalo corned beef flank cow meatloaf short ribs capicola swine. Spare ribs chicken salami t-bone ground round, pig corned beef bacon. Meatloaf short ribs kevin pork tri-tip. Pig pork turducken frankfurter chuck bacon.
+<br /><br />
+
+<h2>Comments ({{ comments|length }})</h2>
+
+<ul>
+	{% for comment in comments %}
+		<li>{{ comment }}</li>
+	{% endfor %}
+</ul>
+{% endblock %}
