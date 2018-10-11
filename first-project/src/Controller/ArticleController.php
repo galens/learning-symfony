@@ -26,6 +26,9 @@ class ArticleController extends AbstractController
 			'YAAAAS Im going on an all asteroid diet',
 			'I like bacon and I like turtles'
 		];
+
+		
+		
 		return $this->render('article/show.html.twig', [
 			'title' => ucwords(str_replace('-', ' ', $slug)),
 			'comments' => $comments,
