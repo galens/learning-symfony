@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Psr\Log\LoggerInterface;
+use App\Service\SlackClient;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -22,8 +23,14 @@ class ArticleController extends AbstractController
 	/**
 	 * @Route("/news/{slug}", name="article_show")
 	 */
-	public function show($slug, MarkdownHelper $markdownHelper)
+	public function show($slug, MarkdownHelper $markdownHelper, SlackClient $slack, bool $isDebug)
 	{
+		
+		if($slug == 'khaaaaan') {
+			$slack->sendMessage('Khan','Ah, kirk, my old friend....');
+		}
+		
+
 		$comments = [
 			'One time I ate a rock and it did not taste like bacon! Fake news!',
 			'YAAAAS Im going on an all asteroid diet',
